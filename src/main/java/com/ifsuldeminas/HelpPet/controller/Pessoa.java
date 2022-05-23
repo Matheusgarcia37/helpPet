@@ -6,5 +6,5 @@ public class Pessoa {
     private String email;
     private long telefone;
     private String cpf_cnpj;
-
+    //heranca para pessoa
 }

@@ -6,4 +6,5 @@ public class Pet {
     private int idade;
     private float peso;
     private String especie;
+    //atendimento e cliente
 }
