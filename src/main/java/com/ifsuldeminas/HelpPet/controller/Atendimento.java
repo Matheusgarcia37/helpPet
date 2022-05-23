@@ -10,5 +10,5 @@ public class Atendimento {
     private int prioridade;
     private Set<Atendimento> atendimentos;
     private Medico medico;
-    //pet
+    private Pet pet;
 }
