@@ -1,9 +1,14 @@
 package com.ifsuldeminas.HelpPet.controller;
 
+import javax.persistence.*;
 import java.util.Date;
-import java.util.Set;
 
+@Entity
 public class Atendimento {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date data;
     private String tipo_atendimento;
     private float valor;
