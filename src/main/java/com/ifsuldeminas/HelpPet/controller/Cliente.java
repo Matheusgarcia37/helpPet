@@ -1,9 +1,6 @@
 package com.ifsuldeminas.HelpPet.controller;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -12,5 +9,7 @@ public class Cliente extends Pessoa{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private int cod_cliente;
+    @OneToMany
+    @JoinColumn(name="cliente_id")
     private Set<Pet> pets;
 }

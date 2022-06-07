@@ -13,6 +13,8 @@ public class Atendimento {
     private String tipo_atendimento;
     private float valor;
     private int prioridade;
+    @ManyToOne
     private Medico medico;
     private Pet pet;
+
 }

@@ -1,9 +1,6 @@
 package com.ifsuldeminas.HelpPet.controller;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Pessoa {
@@ -15,5 +12,6 @@ public class Pessoa {
     private String email;
     private long telefone;
     private String cpf_cnpj;
+    @OneToOne(mappedBy = "pessoa")
     private Usuario usuario;
 }
