@@ -1,6 +1,8 @@
 package com.ifsuldeminas.HelpPet.controller;
 
 import javax.persistence.*;
+
+
 import java.util.Set;
 @Entity
 public class Pet {
@@ -14,8 +16,7 @@ public class Pet {
     private String especie;
     @ManyToOne
     private Cliente cliente;
-    @OneToMany
-    @JoinColumn(name="pet_id")
+    @OneToMany(mappedBy="pet")
     private Set<Atendimento> atendimentos;
 
 }

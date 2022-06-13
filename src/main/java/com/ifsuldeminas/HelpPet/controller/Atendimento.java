@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+
 public class Atendimento {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -15,6 +16,6 @@ public class Atendimento {
     private int prioridade;
     @ManyToOne
     private Medico medico;
+    @ManyToOne
     private Pet pet;
-
 }
