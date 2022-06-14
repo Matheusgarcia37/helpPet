@@ -9,7 +9,6 @@ public class Medico extends Pessoa {
     @GeneratedValue(strategy =  GenerationType.AUTO)
     private long id;
     private int cod_vet;
-    @OneToMany
-    @JoinColumn(name="medico_id")
+    @OneToMany(mappedBy="medico")
     private Set<Atendimento> atendimentos;
 }

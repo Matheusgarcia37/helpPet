@@ -9,7 +9,6 @@ public class Cliente extends Pessoa{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private int cod_cliente;
-    @OneToMany
-    @JoinColumn(name="cliente_id")
+    @OneToMany(mappedBy="cliente")
     private Set<Pet> pets;
 }
