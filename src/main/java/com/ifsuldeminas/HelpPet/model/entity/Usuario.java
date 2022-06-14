@@ -1,4 +1,4 @@
-package com.ifsuldeminas.HelpPet.controller;
+package com.ifsuldeminas.HelpPet.model.entity;
 
 import javax.persistence.*;
 

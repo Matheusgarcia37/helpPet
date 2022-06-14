@@ -1,6 +1,9 @@
-package com.ifsuldeminas.HelpPet.controller;
+package com.ifsuldeminas.HelpPet.model.entity;
 
 import javax.persistence.*;
+
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "class")
 
 @Entity
 public class Pessoa {

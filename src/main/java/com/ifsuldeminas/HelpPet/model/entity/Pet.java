@@ -1,8 +1,6 @@
-package com.ifsuldeminas.HelpPet.controller;
+package com.ifsuldeminas.HelpPet.model.entity;
 
 import javax.persistence.*;
-
-
 import java.util.Set;
 @Entity
 public class Pet {
