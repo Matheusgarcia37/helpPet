@@ -16,5 +16,4 @@ public class Pet {
     private Cliente cliente;
     @OneToMany(mappedBy="pet")
     private Set<Atendimento> atendimentos;
-
 }
