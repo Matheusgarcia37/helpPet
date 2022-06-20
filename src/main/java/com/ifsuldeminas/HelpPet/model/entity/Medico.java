@@ -8,4 +8,5 @@ import javax.persistence.Entity;
 public class Medico extends Pessoa {
     private int cod_vet;
     //private Set<Atendimento> atendimentos;
+    //teste
 }
