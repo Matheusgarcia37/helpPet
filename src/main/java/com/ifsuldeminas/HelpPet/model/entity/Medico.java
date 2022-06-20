@@ -1,7 +1,7 @@
 package com.ifsuldeminas.HelpPet.model.entity;
 
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @DiscriminatorValue(value = "Medico")
@@ -10,6 +10,6 @@ public class Medico extends Pessoa {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private int cod_vet;
-    @OneToMany(mappeBy="medico")
+    @OneToMany(mappedBy="medico")
     private Set<Atendimento> atendimentos;
 }
