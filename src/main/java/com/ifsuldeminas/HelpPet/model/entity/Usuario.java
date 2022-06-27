@@ -12,3 +12,4 @@ public class Usuario {
     @OneToOne
     private Pessoa pessoa;
 }
+
