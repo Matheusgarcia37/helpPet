@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/atendimento")
+@RequestMapping("/pet")
 public class PetController {
 
     private PetRepository petRepository;
@@ -44,25 +44,27 @@ public class PetController {
     public Pet save(@RequestBody Pet pet){
         //posteriormente: implementar tratamento de erros
 
-        //cadastrar o pessoa no BD
+        //cadastrar o pet no BD
         return petRepository.save(pet);
     }
 
     //operacao Update
     @PutMapping("/{id}")
-    public Pessoa update(@PathVariable Long id, @RequestBody Pessoa pessoa){
+    public Pet update(@PathVariable Long id, @RequestBody Pet pet){
         //posteriormente: implementar tratamento de erros
 
         //buscar o pessoa no BD
-        Pessoa PessoaAux = pessoaRepository.getById(id);
-        //atualizar os dados da Pessoa
-        PessoaAux.setNome(pessoa.getNome());
-        PessoaAux.setEndereco(pessoa.getEndereco());
-        PessoaAux.setEmail(pessoa.getEmail());
-        PessoaAux.setCpf_cnpj(pessoa.getEmail());
-        PessoaAux.setTelefone(pessoa.getTelefone());
+        Pet PetAux = petRepository.getById(id);
+        //atualizar os dados da Pet
+        PetAux.setNome(pet.getNome());
+        PetAux.setCliente(pet.getCliente());
+        PetAux.setEspecie(pet.getEspecie());
+        PetAux.setPeso(pet.getPeso());
+        PetAux.setIdade(pet.getIdade());
+        PetAux.setAtendimentos(pet.getAtendimentos());
+        PetAux.setRaca(pet.getRaca());
         //atualizar os dados do plano no BD
-        return pessoaRepository.save(PessoaAux);
+        return petRepository.save(PetAux);
     }
 
     //operacao Delete
@@ -71,6 +73,6 @@ public class PetController {
         //posteriormente: implementar tratamento de erros
 
         //excluir o plano no BD pelo id
-        pessoaRepository.deleteById(id);
+        petRepository.deleteById(id);
     }
 }

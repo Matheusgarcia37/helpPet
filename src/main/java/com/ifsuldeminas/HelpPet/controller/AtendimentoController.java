@@ -17,33 +17,33 @@ public class AtendimentoController {
     }
 
     //implementacao de metodos para tratamento das requisicoes correspondentes
-    //`as operacoes CRUD para Plano:
+    //`as operacoes CRUD para atendimento:
 
     //operacoes Read:
 
-    //obtem uma lista dos planos cadastrados
+    //obtem uma lista dos atendimento cadastrados
     @GetMapping
     public List<Atendimento> list(){
         //fazer uma consulta no BD
         return atendimentoRepository.findAll();
     }
 
-    //obtem dados de um plano
+    //obtem dados de um atendimento
     @GetMapping("/{id}")
     public Atendimento show(@PathVariable Long id){
         //posteriormente: implementar tratamento de erros
 
-        //fazer uma busca no BD pelo id do plano
+        //fazer uma busca no BD pelo id do atendimento
         return atendimentoRepository.getById(id);
     }
 
     //operacao Create
     @PostMapping
-    public Atendimento save(@RequestBody Atendimento plano){
+    public Atendimento save(@RequestBody Atendimento atendimento){
         //posteriormente: implementar tratamento de erros
 
-        //cadastrar o plano no BD
-        return atendimentoRepository.save(plano);
+        //cadastrar o atendimento no BD
+        return atendimentoRepository.save(atendimento);
     }
 
     //operacao Update
@@ -51,12 +51,12 @@ public class AtendimentoController {
     public Atendimento update(@PathVariable Long id, @RequestBody Atendimento atendimento){
         //posteriormente: implementar tratamento de erros
 
-        //buscar o plano no BD
+        //buscar o atendimento no BD
         Atendimento AtendimentoAux = atendimentoRepository.getById(id);
-        //atualizar os dados do plano
+        //atualizar os dados do atendimento
         AtendimentoAux.setTipo_atendimento(atendimento.getTipo_atendimento());
         AtendimentoAux.setData(atendimento.getData());
-        //atualizar os dados do plano no BD
+        //atualizar os dados do atendimento no BD
         return atendimentoRepository.save(AtendimentoAux);
     }
 
@@ -65,7 +65,7 @@ public class AtendimentoController {
     public void delete(@PathVariable Long id){
         //posteriormente: implementar tratamento de erros
 
-        //excluir o plano no BD pelo id
+        //excluir o atendimento no BD pelo id
         atendimentoRepository.deleteById(id);
     }
 }

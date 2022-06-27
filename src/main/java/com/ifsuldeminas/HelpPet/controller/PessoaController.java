@@ -1,14 +1,13 @@
 package com.ifsuldeminas.HelpPet.controller;
 
 import com.ifsuldeminas.HelpPet.model.entity.Pessoa;
-import com.ifsuldeminas.HelpPet.model.entity.repositories.AtendimentoRepository;
 import com.ifsuldeminas.HelpPet.model.entity.repositories.PessoaRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/atendimento")
+@RequestMapping("/pessoa")
 public class PessoaController {
 
     private PessoaRepository pessoaRepository;
